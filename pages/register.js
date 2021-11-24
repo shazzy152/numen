@@ -2,7 +2,7 @@ import Link from "next/link";
 import Router from 'next/router'
 import React, {useState} from 'react';
 import { useFormik } from "formik";
-import validationSchema from './valSchema'
+import validationSchema from '../components/valSchema'
 
 const Login = () => {
 
