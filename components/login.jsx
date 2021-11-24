@@ -37,12 +37,10 @@ const Login = () => {
     const verifyUser =  () => {
         let data = JSON.parse(localStorage.getItem('userData')) 
         data.map(i => {
-            console.log(i.password, userCred.password)
-            if(i.password === userCred.password && i.email === userCred.email){
-                 Router.push("/HomePage")
-            } else {
-                alert("Email/Password does not match")
-            }
+            if(i.email.toString() === userCred.email.toString() && i.password.toString() === userCred.password.toString()){
+                Router.push("/HomePage")
+                console.log('true')
+            } 
         })
     } 
 
